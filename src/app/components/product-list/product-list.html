@@ -1,0 +1,11 @@
+<div class="products-grid" role="list" aria-label="Liste des produits">
+  @for (product of products; track product.id) {
+    @if (!searchTerm() || product.name.toLowerCase().includes(searchTerm().toLowerCase())) {
+      <app-product-item
+        [product]="product"
+        (addToCart)="addToCart.emit(product)"
+        role="listitem"
+      ></app-product-item>
+    }
+  }
+</div>

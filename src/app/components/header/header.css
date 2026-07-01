@@ -1,0 +1,131 @@
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 4rem;
+
+  background: linear-gradient(
+    135deg,
+    #4caf50,
+    #2e7d32
+  );
+
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* LOGO */
+.header__logo h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.header__logo h1:hover {
+  transform: scale(1.05);
+}
+
+.header__logo span {
+  color: #fbff01;
+}
+
+/* NAVIGATION */
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+.header__nav a {
+  position: relative;
+
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+/* Effet Hover */
+.header__nav a:hover {
+  color: #fbff01;
+  transform: translateY(-2px);
+}
+
+/* Soulignement animé */
+.header__nav a::after {
+  content: "";
+  position: absolute;
+
+  width: 0;
+  height: 3px;
+
+  bottom: -6px;
+  left: 0;
+
+  background-color: #fbff01;
+  border-radius: 10px;
+
+  transition: width 0.3s ease;
+}
+
+.header__nav a:hover::after,
+.header__nav a.active::after {
+  width: 100%;
+}
+
+.header__nav a.active {
+  color: #fbff01;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+
+  .header__logo h1 {
+    font-size: 1.7rem;
+  }
+
+  .header__nav {
+    gap: 1rem;
+  }
+
+  .header__nav a {
+    font-size: 0.95rem;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .header__logo h1 {
+    font-size: 1.5rem;
+  }
+
+  .header__nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}

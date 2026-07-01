@@ -1,0 +1,14 @@
+<article class="product-card">
+  <a href="#" class="product-link" aria-label="Voir le produit {{ product().name }}">
+    <img [src]="product().image" [alt]="product().name" />
+
+    <div class="product-content">
+      <h3>{{ product().name }}</h3>
+      <p>{{ product().description }}</p>
+      <span class="price">{{ product().price }} FCFA</span>
+    </div>
+  </a>
+  <button type="button" class="add-button" (click)="addToCart.emit()">
+    Ajouter au panier
+  </button>
+</article>

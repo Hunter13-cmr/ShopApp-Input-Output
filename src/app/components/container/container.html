@@ -1,0 +1,65 @@
+<section class="container" aria-labelledby="products-title">
+  <div class="hero">
+    <h2 id="products-title">Produits populaires</h2>
+    <p>Découvrez des produits soigneusement sélectionnés pour votre quotidien.</p>
+  </div>
+
+  <div class="toolbar">
+    <input
+      type="search"
+      placeholder="Rechercher un produit"
+      [value]="searchTerm()"
+      (input)="onSearch($any($event.target).value)"
+      aria-label="Rechercher un produit"
+    />
+
+    <button type="button" class="cart-button" (click)="isCartOpen.set(true)">
+      Panier ({{ totalItems }})
+    </button>
+  </div>
+
+  <app-product-list
+    [searchTerm]="searchTerm()"
+    (addToCart)="addToCart($event)"
+  ></app-product-list>
+
+  @if (isCartOpen()) {
+    <div class="cart-modal" role="dialog" aria-modal="true" aria-label="Panier">
+      <div class="cart-panel">
+        <div class="cart-header">
+          <h3>Votre panier</h3>
+          <button type="button" (click)="closeCart()">Fermer</button>
+        </div>
+
+        @if (cartItems().length === 0) {
+          <p class="empty-cart">Votre panier est vide pour le moment.</p>
+        } @else {
+          <ul>
+            @for (item of cartItems(); track item.id) {
+              <li>
+                <div class="cart-item-info">
+                  <span>{{ item.name }} × {{ item.quantity }}</span>
+                  <strong>{{ item.price * item.quantity }} FCFA</strong>
+                </div>
+                <div class="cart-item-actions">
+                  <button type="button" class="qty-btn" (click)="decreaseQuantity(item.id)">−</button>
+                  <span>{{ item.quantity }}</span>
+                  <button type="button" class="qty-btn" (click)="increaseQuantity(item.id)">+</button>
+                  <button type="button" (click)="removeFromCart(item.id)">Retirer</button>
+                </div>
+              </li>
+            }
+          </ul>
+          <div class="cart-summary">
+            <p>Total : {{ totalPrice }} FCFA</p>
+            <button type="button" class="checkout" (click)="confirmOrder()">Commander</button>
+          </div>
+        }
+
+        @if (orderMessage()) {
+          <p class="order-message">{{ orderMessage() }}</p>
+        }
+      </div>
+    </div>
+  }
+</section>
