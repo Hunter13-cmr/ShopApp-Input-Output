@@ -1,4 +1,21 @@
-/* CONTAINER PRINCIPAL */
+/* ============================================
+   CONTAINER COMPONENT - MAIN SECTION
+   ============================================
+   
+   Layout:
+   - Min-height: calc(100vh - 180px) pour laisser place au header/footer
+   - Display: Flex column avec gap 2rem
+   - Padding: 2rem pour espacement confortable
+   
+   Background:
+   - Dégradé vertical du vert clair vers vert très clair
+   - Effet de profondeur subtil
+   
+   Responsive:
+   - Desktop: padding 2rem
+   - Tablette (≤768px): padding 1.5rem
+   - Mobile (≤576px): padding 1rem
+*/
 
 .container {
   min-height: calc(100vh - 180px);
@@ -10,6 +27,28 @@
   position: relative;
 }
 
+/* ============================================
+   HERO SECTION
+   ============================================
+   
+   Design:
+   - Text-align: center pour titre et description
+   - Padding: 3rem 1rem pour espacement vertical
+   - Position: relative pour pseudo-elements décoratifs
+   
+   Special Effects:
+   - ::before: Emoji ✨ flottant (animation float)
+   - ::after: Cercle vert pulsant (animation pulse)
+   - Background clip text pour dégradé sur le titre
+   
+   Animations:
+   - float: Translation verticale 6s ease-in-out
+   - pulse: Scale 1 → 1.2 avec opacity
+   - slideInDown: Entrée du titre depuis le haut
+   - slideInUp: Entrée du paragraphe depuis le bas
+   - Delay: 0.2s pour paragraphe (effet cascade)
+*/
+
 .hero {
   text-align: center;
   color: #1b5e20;
@@ -17,6 +56,7 @@
   position: relative;
 }
 
+/* Élément décoratif flottant */
 .hero::before {
   content: "✨";
   position: absolute;
@@ -27,6 +67,7 @@
   animation: float 6s ease-in-out infinite;
 }
 
+/* Cercle pulsant en arrière-plan */
 .hero::after {
   content: "";
   position: absolute;
@@ -59,6 +100,22 @@
   }
 }
 
+/* ============================================
+   HERO TITLE
+   ============================================
+   
+   Design:
+   - Gradient text: background-clip pour dégradé
+   - Font-size: 2.5rem avec letter-spacing
+   - Z-index: 1 pour être au-dessus des pseudo-elements
+   - Animation: slideInDown pour entrée dynamique
+   
+   Technique:
+   -webkit-background-clip: text
+   -webkit-text-fill-color: transparent
+   Pour compatibilité cross-browser
+*/
+
 .hero h2 {
   margin: 0 0 1rem;
   font-size: 2.5rem;
@@ -72,6 +129,21 @@
   z-index: 1;
   animation: slideInDown 0.8s ease-out;
 }
+
+/* ============================================
+   HERO DESCRIPTION
+   ============================================
+   
+   Design:
+   - Max-width: 600px centré avec margin auto
+   - Line-height: 1.6 pour lisibilité
+   - Color: Gris moyen (#4f4f4f)
+   - Animation: slideInUp avec delay 0.2s
+   
+   Animation:
+   - both: Garde l'état final après animation
+   - Delay: 0.2s pour effet cascade après le titre
+*/
 
 .hero p {
   margin: 0;
@@ -107,6 +179,21 @@
   }
 }
 
+/* ============================================
+   TOOLBAR - SEARCH & CART BUTTONS
+   ============================================
+   
+   Layout:
+   - Flexbox avec space-between
+   - Flex-wrap: wrap pour responsive
+   - Gap: 1rem entre éléments
+   - Animation: fadeIn avec delay 0.4s
+   
+   Design:
+   - Align-items: center pour alignement vertical
+   - Animation delay: Effet cascade après hero
+*/
+
 .toolbar {
   display: flex;
   justify-content: space-between;
@@ -124,6 +211,28 @@
     opacity: 1;
   }
 }
+
+/* ============================================
+   SEARCH INPUT
+   ============================================
+   
+   Design:
+   - Shape: Pilule (border-radius: 999px)
+   - Border: 2px vert clair (#c8e6c9)
+   - Background: Blanc
+   - Padding: 0.9rem 1.2rem confortable
+   - Shadow: Ombre douce pour profondeur
+   
+   Focus State:
+   - Border: Vert principal (#4caf50)
+   - Box-shadow: Double ombre (focus ring + élévation)
+   - Transform: translateY(-2px) pour effet d'élévation
+   - Outline: none pour style personnalisé
+   
+   Accessibility:
+   - Min-width: 220px pour lisibilité
+   - Flex: 1 pour prendre l'espace disponible
+*/
 
 .toolbar input {
   flex: 1;
@@ -144,6 +253,36 @@
   transform: translateY(-2px);
 }
 
+/* ============================================
+   ACTION BUTTONS (Cart & Checkout)
+   ============================================
+   
+   Design:
+   - Shape: Pilule avec border-radius 999px
+   - Background: Dégradé vert Premium
+   - Shadow: Ombre colorée verte
+   - Typography: White, weight 600, letter-spacing
+   - Overflow: hidden pour effet ripple
+   
+   Ripple Effect:
+   - ::before pseudo-element circulaire
+   - Scale 0 → 300px au hover
+   - Background: blanc semi-transparent (0.2)
+   - Center: Transform translate(-50%, -50%)
+   
+   Hover Effects:
+   - Shadow: Augmentée et plus diffuse
+   - Transform: Translation vers le haut (-2px)
+   
+   Active State:
+   - Retour position normale
+   - Effet "pressé"
+   
+   Animation:
+   - Duration: 0.6s pour ripple étendu
+   - Easing: Défini dans transition globale
+*/
+
 .cart-button, .checkout, .cart-header button, .cart-panel button {
   border: none;
   border-radius: 999px;
@@ -159,6 +298,7 @@
   overflow: hidden;
 }
 
+/* Effet ripple qui s'étend depuis le centre */
 .cart-button::before, .checkout::before, .cart-header button::before, .cart-panel button::before {
   content: "";
   position: absolute;
@@ -185,6 +325,23 @@
 .cart-button:active, .checkout:active {
   transform: translateY(0);
 }
+
+/* ============================================
+   CART OVERLAY & MODAL
+   ============================================
+   
+   Overlay:
+   - Fixed position couvrant toute la vue
+   - Background: Noir 50% transparence
+   - Backdrop-filter: blur 4px pour glassmorphism
+   - Animation: fadeIn 0.3s pour apparition douce
+   
+   Modal:
+   - Fixed avec overflow-y: auto pour scroll
+   - Align-items: flex-start pour panel en haut
+   - Padding: 2rem pour espacement
+   - Z-index: 1100 au-dessus de l'overlay
+*/
 
 .cart-overlay {
   position: fixed;
@@ -217,6 +374,25 @@
   animation: fadeIn 0.3s ease-out;
 }
 
+/* ============================================
+   CART PANEL
+   ============================================
+   
+   Design:
+   - Width: min(500px, 100%) pour responsivité
+   - Max-height: 85vh pour laisser voir le contenu derrière
+   - Background: Dégradé blanc pur → cassé
+   - Border-radius: 20px coins arrondis
+   - Border: Bordure verte subtile (0.2 opacité)
+   - Shadow: Ombre forte pour effet modal
+   - Overflow: hidden pour respecter border-radius
+   
+   Special Effects:
+   - ::before: Barre colorée en haut (5px)
+   - Animation: slideInUp avec cubic-bezier
+   - Position: relative pour pseudo-element
+*/
+
 .cart-panel {
   width: min(500px, 100%);
   max-height: 85vh;
@@ -232,6 +408,7 @@
   animation: slideInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Barre colorée en haut du panier */
 .cart-panel::before {
   content: "";
   position: absolute;
@@ -241,6 +418,17 @@
   height: 5px;
   background: linear-gradient(90deg, #4caf50, #2e7d32, #fbff01);
 }
+
+/* ============================================
+   CART HEADER
+   ============================================
+   
+   Design:
+   - Layout: Space-between pour titre et bouton fermer
+   - Border-bottom: 2px vert très clair pour séparation
+   - Padding-bottom: 1rem pour espacement
+   - Margin-bottom: 1.5rem pour éloigner le contenu
+*/
 
 .cart-header {
   display: flex;
@@ -257,6 +445,26 @@
   font-weight: 700;
   color: #1b5e20;
 }
+
+/* ============================================
+   CART ITEMS LIST
+   ============================================
+   
+   Design:
+   - List-style: none pour enlever les puces
+   - Display: Flex column avec gap
+   - Overflow-y: auto pour scroll interne
+   - Max-height: 40vh pour limiter la hauteur
+   - Background: Semi-transparent blanc
+   
+   Animation:
+   - Hover: Translation droite (4px) + background vert
+   - Border-radius: 12px pour coins arrondis
+   - Transition: 0.3s ease pour fluidité
+   
+   Responsive:
+   - Mobile: max-height réduit à 30vh
+*/
 
 .cart-panel ul {
   list-style: none;
@@ -298,6 +506,28 @@
   gap: 0.35rem;
 }
 
+/* ============================================
+   QUANTITY BUTTONS
+   ============================================
+   
+   Design:
+   - Shape: Circles 32x32px
+   - Border: 2px vert (#4caf50)
+   - Background: Blanc
+   - Text: Vert foncé, bold, 1.1rem
+   - Display: Flex pour centrer ±
+   
+   Hover Effects:
+   - Background: Vert principal
+   - Color: Blanc
+   - Transform: Scale 1.1 pour agrandissement
+   - Shadow: Ombre verte pour profondeur
+   
+   Accessibility:
+   - Cursor: pointer
+   - Transition fluide pour feedback visuel
+*/
+
 .qty-btn {
   width: 32px;
   height: 32px;
@@ -327,6 +557,22 @@
   font-weight: 600;
 }
 
+/* ============================================
+   CART SUMMARY SECTION
+   ============================================
+   
+   Design:
+   - Layout: Space-between pour total et bouton
+   - Background: Dégradé vert très transparent
+   - Border: 2px vert très clair (#c8e6c9)
+   - Border-radius: 12px pour coins arrondis
+   - Padding: 1.2rem pour espacement
+   
+   Typography:
+   - Total: 1.2rem, weight 700, vert foncé
+   - Montant mis en valeur pour importance
+*/
+
 .cart-summary {
   display: flex;
   justify-content: space-between;
@@ -344,6 +590,18 @@
   font-weight: 700;
   color: #1b5e20;
 }
+
+/* ============================================
+   EMPTY CART MESSAGE
+   ============================================
+   
+   Design:
+   - Text-align: center pour message
+   - Padding: 2rem pour espacement
+   - Color: Gris moyen (#666)
+   - Font-style: italic pour ton doux
+   - Animation: fadeIn pour apparition douce
+*/
 
 .empty-cart {
   color: #666;
@@ -364,7 +622,24 @@
   }
 }
 
-/* MOBILE */
+/* ============================================
+   RESPONSIVE - MOBILE (≤576px)
+   ============================================
+   
+   Adaptations:
+   - Container: padding réduit (1rem)
+   - Hero: Alignement gauche (text-align: left)
+   - Titre hero: Taille réduite (1.3rem)
+   - Cart éléments: Disposition verticale (column)
+   - Cart panel: 
+     * Width: 100% pour pleine largeur
+     * Max-height: 85vh avec scroll
+     * Padding réduit (1.5rem)
+   - Cart list: Max-height 30vh pour plus de scroll
+   - Summary: Column layout avec gap 1rem
+   - Boutons: Width 100% pour facilité tactile
+*/
+
 @media (max-width: 576px) {
   .container {
     padding: 1rem;
