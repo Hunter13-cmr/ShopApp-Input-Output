@@ -1,6 +1,44 @@
+<!-- ============================================
+     PRODUCT LIST - TEMPLATE
+     ============================================
+     
+     Structure :
+     - .products-grid : Conteneur grille responsive
+     - @for : Boucle Angular sur les produits
+     - @if : Filtre selon searchTerm
+     
+     Accessibilité :
+     - role="list" : Liste sémantique pour screen readers
+     - aria-label : Description de la liste
+     - role="listitem" : Chaque carte est un item de liste
+-->
+
 <div class="products-grid" role="list" aria-label="Liste des produits">
+  <!-- ============================================
+       BOUCLE SUR LES PRODUITS
+       ============================================
+       - @for : Itération Angular moderne (remplace *ngFor)
+       - track product.id : Optimisation performance
+       - products : Tableau de produits du composant
+  -->
   @for (product of products; track product.id) {
+    <!-- ============================================
+         FILTRE DE RECHERCHE
+         ============================================
+         - @if : Condition Angular (remplace *ngIf)
+         - searchTerm() : Signal réactif (parenthèses pour lecture)
+         - Condition : Affiche si recherche vide OU nom contient terme
+         - toLowerCase() : Recherche case-insensitive
+    -->
     @if (!searchTerm() || product.name.toLowerCase().includes(searchTerm().toLowerCase())) {
+      <!-- ============================================
+           CARTE PRODUIT
+           ============================================
+           - app-product-item : Composant enfant
+           - [product] : Input binding (données produit)
+           - (addToCart) : Output binding (événement)
+           - role="listitem" : Accessibilité
+      -->
       <app-product-item
         [product]="product"
         (addToCart)="addToCart.emit(product)"

@@ -1,21 +1,17 @@
 /* ============================================
-   FOOTER COMPONENT
+   FOOTER COMPONENT - REDUCED SIZE
    ============================================
    
    Design System:
    - Background: Dégradé vert forêt avec animation shimmer
    - Shadow: Ombre supérieure pour séparer du contenu
-   - Position: relative avec overflow hidden pour animations
-   - Padding: 3.5rem 4rem pour espacement généreux
+   - Padding réduit pour footer plus compact
+   - Layout: Column avec main en haut, copyright en bas
    
-   Special Effects:
-   - Top border: Barre animée avec gradient shimmer
-   - Animation: shimmer 3s linear infinite
-   - Box-shadow: Effet d'élévation vers le haut
-   
-   Responsive:
-   - Desktop: 3 colonnes avec flex-wrap
-   - Mobile: Colonne unique centrée
+   Structure:
+   - .footer: Flex column, full width, padding-top only
+   - .footer__main: Padding horizontal pour contenu
+   - .footer-bottom: Full width, sticky at bottom
 */
 
 .footer {
@@ -28,18 +24,26 @@
   color: white;
 
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  gap: 1.5rem;
 
-  gap: 2.5rem;
-
-  padding: 3.5rem 4rem;
+  padding: 2rem 0 0 0;
 
   position: relative;
   overflow: hidden;
 
-  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.footer__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0 3rem;
+  flex: 1;
 }
 
 /* Barre animée en haut du footer */
@@ -70,15 +74,15 @@
    Design:
    - Typography: Poppins 900 pour marque premium
    - Text-shadow: Effet de profondeur
-   - Letter-spacing: 2px pour élégance
-   - Description: Opacité 0.9 pour lisibilité
+   - Letter-spacing réduit pour plus compact
+   - Description: Taille réduite
 */
 
 .footer__brand h2 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 900;
-  letter-spacing: 2px;
-  margin-bottom: 0.8rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -90,8 +94,8 @@
 .footer__brand p {
   max-width: 280px;
   opacity: 0.9;
-  line-height: 1.6;
-  font-size: 0.95rem;
+  line-height: 1.5;
+  font-size: 0.85rem;
 }
 
 /* ============================================
@@ -99,7 +103,7 @@
    ============================================
    
    Design:
-   - Layout: Column avec gap 0.9rem
+   - Layout: Column avec gap réduit
    - Headings: Soulignement jaune en pseudo-element
    - Links: Flèche qui apparaît au hover
    - Hover: Translation + changement couleur
@@ -113,17 +117,17 @@
 .footer__links {
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: 0.6rem;
 }
 
 .footer__links h3,
 .footer__social h3 {
-  margin-bottom: 1.2rem;
-  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 0.5px;
   position: relative;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.4rem;
 }
 
 /* Soulignement décoratif sous les titres */
@@ -145,6 +149,7 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   padding-left: 0;
+  font-size: 0.9rem;
 }
 
 /* Flèche qui apparaît au hover */
@@ -173,10 +178,10 @@
    ============================================
    
    Design:
-   - Shape: Cercles de 45x45px
+   - Shape: Cercles de 38x38px (réduit)
    - Background: Blanc semi-transparent (0.15)
-   - Layout: Flex avec gap 1.2rem
-   - Icons: Font-size 1.1rem avec z-index 1
+   - Layout: Flex avec gap 1rem
+   - Icons: Taille réduite 18px
    
    Hover Effects:
    - Fill: Cercle jaune qui grandit depuis centre
@@ -192,12 +197,12 @@
 
 .social-icons {
   display: flex;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 .social-icons a {
-  width: 45px;
-  height: 45px;
+  width: 38px;
+  height: 38px;
 
   border-radius: 50%;
 
@@ -237,42 +242,50 @@
   box-shadow: 0 8px 20px rgba(251, 255, 1, 0.4);
 }
 
-.social-icons a i {
+.social-icons a svg {
   position: relative;
   z-index: 1;
-  font-size: 1.1rem;
+  width: 18px;
+  height: 18px;
 }
 
 /* ============================================
-   COPYRIGHT SECTION
+   COPYRIGHT SECTION - STATIC AT BOTTOM
    ============================================
    
    Design:
    - Background: Vert foncé (#1b5e20)
    - Text: Blanc centré
    - Letter-spacing: 0.5px pour élégance
+   - Width: 100% pour span full width de l'écran
+   - Margin-top: auto pour pousser en bas
+   - Padding réduit pour footer compact
    
    Special Effect:
    - Shine animation: Effet de brillance qui traverse
    - Gradient: Transparent → blanc 10% → transparent
    - Animation: 3s infinite, left -100% → 100%
    
-   Accessibility:
-   - Position: relative pour contexte empilement
-   - Overflow: hidden pour cacher le shine hors zone
+   Note:
+   - margin-top: auto dans flex column
+     assure que le copyright reste en bas
+   - Width 100% assure pleine largeur écran
 */
 
 .footer-bottom {
+  width: 100%;
   background: #1b5e20;
   color: white;
 
   text-align: center;
-  padding: 1.2rem;
+  padding: 0.8rem;
 
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   letter-spacing: 0.5px;
   position: relative;
   overflow: hidden;
+
+  margin-top: auto;
 }
 
 /* Effet de brillance qui traverse le copyright */
@@ -301,13 +314,13 @@
    ============================================
    
    Adaptations:
-   - Footer: Padding réduit (2.5rem 2rem)
+   - Footer: Padding réduit pour contenu
    - Gap: Réduit entre les sections
 */
 
 @media (max-width: 768px) {
-  .footer {
-    padding: 2.5rem 2rem;
+  .footer__main {
+    padding: 0 2rem;
   }
 }
 
@@ -326,12 +339,12 @@
 */
 
 @media (max-width: 576px) {
+  .footer__main {
+    padding: 0 1.5rem;
+  }
+
   .footer {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    padding: 2rem 1.5rem;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .footer__brand p {

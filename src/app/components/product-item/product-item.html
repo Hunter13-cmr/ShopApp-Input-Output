@@ -1,13 +1,58 @@
+<!-- ============================================
+     PRODUCT ITEM - CARTE PRODUIT
+     ============================================
+     
+     Structure :
+     - article.product-card : Carte complète avec effets hover
+     - a.product-link : Lien vers la page produit
+     - img : Image du produit
+     - .product-content : Infos produit (titre, desc, prix)
+     - button.add-button : Ajout au panier
+     
+     Accessibilité :
+     - aria-label : Description du lien pour screen readers
+     - alt : Texte alternatif pour l'image
+     - Article sémantique pour le référencement
+     
+     Interactions :
+     - Hover sur la carte : Élévation + zoom image
+     - Click sur image : Navigue vers produit
+     - Click sur bouton : Émet événement addToCart
+-->
+
 <article class="product-card">
+  <!-- Lien vers la page détaillée du produit -->
   <a href="#" class="product-link" aria-label="Voir le produit {{ product().name }}">
+    <!-- ============================================
+         IMAGE PRODUIT
+         ============================================
+         - [src] : Binding de l'URL image
+         - [alt] : Texte alternatif pour accessibilité
+         - product() : Signal Angular (parenthèses pour lecture)
+    -->
     <img [src]="product().image" [alt]="product().name" />
 
+    <!-- ============================================
+         CONTENU PRODUIT
+         ============================================
+         - h3 : Nom du produit
+         - p : Description courte
+         - .price : Prix en FCFA
+    -->
     <div class="product-content">
       <h3>{{ product().name }}</h3>
       <p>{{ product().description }}</p>
       <span class="price">{{ product().price }} FCFA</span>
     </div>
   </a>
+
+  <!-- ============================================
+       BOUTON AJOUTER AU PANIER
+       ============================================
+       - (click) : Émet événement vers parent (Container)
+       - addToCart.emit() : Output sans données
+       - Le parent reçoit le produit et gère la logique
+  -->
   <button type="button" class="add-button" (click)="addToCart.emit()">
     Ajouter au panier
   </button>

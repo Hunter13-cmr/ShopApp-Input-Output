@@ -1,8 +1,43 @@
+<!-- ============================================
+     HEADER COMPONENT - TEMPLATE
+     ============================================
+     
+     Structure :
+     - header.header : Conteneur principal sticky
+     - .header__logo : Logo ShopApp avec lien vers home
+     - .header__nav : Navigation avec 4 liens
+     
+     Fonctionnalités :
+     - routerLink : Navigation Angular vers routes
+     - routerLinkActive : Classe "active" automatique sur lien courant
+     - Sticky position : Reste visible en haut lors du scroll
+     
+     Accessibilité :
+     - Balise <nav> sémantique pour navigation
+     - Liens clairs et visibles
+-->
+
 <header class="header">
+  <!-- ============================================
+       LOGO BRAND
+       ============================================
+       - Style inline : color yellow pour "App"
+       - Classe .header__logo pour espacement
+       - h1 : Titre avec "Shop" blanc + "App" jaune
+       - Hover effect : Animation définie dans header.css
+  -->
   <div class="header__logo">
     <h1 style="color: yellow;">Shop<span>App</span></h1>
   </div>
 
+  <!-- ============================================
+       NAVIGATION PRINCIPALE
+       ============================================
+       - 4 liens vers les sections principales
+       - routerLinkActive="active" : Soulignement automatique
+       - Responsive : Stack vertical sur mobile
+       - Flexbox : Espacement automatique entre liens
+  -->
   <nav class="header__nav">
     <a routerLink="/" routerLinkActive="active">Home</a>
     <a routerLink="/products" routerLinkActive="active">Products</a>

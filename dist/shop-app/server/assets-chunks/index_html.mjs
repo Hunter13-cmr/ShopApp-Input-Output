@@ -263,7 +263,7 @@ img[_ngcontent-ng-c3177019257] {
   }
 }
 /*# sourceMappingURL=/header.css.map */</style><style ng-app-id="ng">
-.footer[_ngcontent-ng-c2367730538] {
+.footer[_ngcontent-ng-c4009182144] {
   background:
     linear-gradient(
       135deg,
@@ -280,7 +280,7 @@ img[_ngcontent-ng-c3177019257] {
   overflow: hidden;
   box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.15);
 }
-.footer[_ngcontent-ng-c2367730538]::before {
+.footer[_ngcontent-ng-c4009182144]::before {
   content: "";
   position: absolute;
   top: 0;
@@ -293,9 +293,9 @@ img[_ngcontent-ng-c3177019257] {
       #fbff01,
       #4caf50,
       #2e7d32);
-  animation: _ngcontent-ng-c2367730538_shimmer 3s linear infinite;
+  animation: _ngcontent-ng-c4009182144_shimmer 3s linear infinite;
 }
-@keyframes _ngcontent-ng-c2367730538_shimmer {
+@keyframes _ngcontent-ng-c4009182144_shimmer {
   0% {
     background-position: -1000px 0;
   }
@@ -303,30 +303,30 @@ img[_ngcontent-ng-c3177019257] {
     background-position: 1000px 0;
   }
 }
-.footer__brand[_ngcontent-ng-c2367730538]   h2[_ngcontent-ng-c2367730538] {
+.footer__brand[_ngcontent-ng-c4009182144]   h2[_ngcontent-ng-c4009182144] {
   font-size: 2.2rem;
   font-weight: 900;
   letter-spacing: 2px;
   margin-bottom: 0.8rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
-.footer__brand[_ngcontent-ng-c2367730538]   span[_ngcontent-ng-c2367730538] {
+.footer__brand[_ngcontent-ng-c4009182144]   span[_ngcontent-ng-c4009182144] {
   color: #fbff01;
   font-weight: 900;
 }
-.footer__brand[_ngcontent-ng-c2367730538]   p[_ngcontent-ng-c2367730538] {
+.footer__brand[_ngcontent-ng-c4009182144]   p[_ngcontent-ng-c4009182144] {
   max-width: 280px;
   opacity: 0.9;
   line-height: 1.6;
   font-size: 0.95rem;
 }
-.footer__links[_ngcontent-ng-c2367730538] {
+.footer__links[_ngcontent-ng-c4009182144] {
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
 }
-.footer__links[_ngcontent-ng-c2367730538]   h3[_ngcontent-ng-c2367730538], 
-.footer__social[_ngcontent-ng-c2367730538]   h3[_ngcontent-ng-c2367730538] {
+.footer__links[_ngcontent-ng-c4009182144]   h3[_ngcontent-ng-c4009182144], 
+.footer__social[_ngcontent-ng-c4009182144]   h3[_ngcontent-ng-c4009182144] {
   margin-bottom: 1.2rem;
   font-size: 1.2rem;
   font-weight: 700;
@@ -334,8 +334,8 @@ img[_ngcontent-ng-c3177019257] {
   position: relative;
   padding-bottom: 0.5rem;
 }
-.footer__links[_ngcontent-ng-c2367730538]   h3[_ngcontent-ng-c2367730538]::after, 
-.footer__social[_ngcontent-ng-c2367730538]   h3[_ngcontent-ng-c2367730538]::after {
+.footer__links[_ngcontent-ng-c4009182144]   h3[_ngcontent-ng-c4009182144]::after, 
+.footer__social[_ngcontent-ng-c4009182144]   h3[_ngcontent-ng-c4009182144]::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -345,14 +345,14 @@ img[_ngcontent-ng-c3177019257] {
   background: #fbff01;
   border-radius: 2px;
 }
-.footer__links[_ngcontent-ng-c2367730538]   a[_ngcontent-ng-c2367730538] {
+.footer__links[_ngcontent-ng-c4009182144]   a[_ngcontent-ng-c4009182144] {
   text-decoration: none;
   color: white;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   padding-left: 0;
 }
-.footer__links[_ngcontent-ng-c2367730538]   a[_ngcontent-ng-c2367730538]::before {
+.footer__links[_ngcontent-ng-c4009182144]   a[_ngcontent-ng-c4009182144]::before {
   content: "\\2192";
   position: absolute;
   left: -20px;
@@ -360,20 +360,20 @@ img[_ngcontent-ng-c3177019257] {
   transition: all 0.3s ease;
   color: #fbff01;
 }
-.footer__links[_ngcontent-ng-c2367730538]   a[_ngcontent-ng-c2367730538]:hover {
+.footer__links[_ngcontent-ng-c4009182144]   a[_ngcontent-ng-c4009182144]:hover {
   color: #fbff01;
   transform: translateX(8px);
   padding-left: 0;
 }
-.footer__links[_ngcontent-ng-c2367730538]   a[_ngcontent-ng-c2367730538]:hover::before {
+.footer__links[_ngcontent-ng-c4009182144]   a[_ngcontent-ng-c4009182144]:hover::before {
   opacity: 1;
   left: -15px;
 }
-.social-icons[_ngcontent-ng-c2367730538] {
+.social-icons[_ngcontent-ng-c4009182144] {
   display: flex;
   gap: 1.2rem;
 }
-.social-icons[_ngcontent-ng-c2367730538]   a[_ngcontent-ng-c2367730538] {
+.social-icons[_ngcontent-ng-c4009182144]   a[_ngcontent-ng-c4009182144] {
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -387,7 +387,7 @@ img[_ngcontent-ng-c3177019257] {
   position: relative;
   overflow: hidden;
 }
-.social-icons[_ngcontent-ng-c2367730538]   a[_ngcontent-ng-c2367730538]::before {
+.social-icons[_ngcontent-ng-c4009182144]   a[_ngcontent-ng-c4009182144]::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -397,20 +397,20 @@ img[_ngcontent-ng-c3177019257] {
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 0;
 }
-.social-icons[_ngcontent-ng-c2367730538]   a[_ngcontent-ng-c2367730538]:hover::before {
+.social-icons[_ngcontent-ng-c4009182144]   a[_ngcontent-ng-c4009182144]:hover::before {
   transform: scale(1);
 }
-.social-icons[_ngcontent-ng-c2367730538]   a[_ngcontent-ng-c2367730538]:hover {
+.social-icons[_ngcontent-ng-c4009182144]   a[_ngcontent-ng-c4009182144]:hover {
   color: #2e7d32;
   transform: translateY(-6px) rotate(360deg);
   box-shadow: 0 8px 20px rgba(251, 255, 1, 0.4);
 }
-.social-icons[_ngcontent-ng-c2367730538]   a[_ngcontent-ng-c2367730538]   i[_ngcontent-ng-c2367730538] {
+.social-icons[_ngcontent-ng-c4009182144]   a[_ngcontent-ng-c4009182144]   i[_ngcontent-ng-c4009182144] {
   position: relative;
   z-index: 1;
   font-size: 1.1rem;
 }
-.footer-bottom[_ngcontent-ng-c2367730538] {
+.footer-bottom[_ngcontent-ng-c4009182144] {
   background: #1b5e20;
   color: white;
   text-align: center;
@@ -420,7 +420,7 @@ img[_ngcontent-ng-c3177019257] {
   position: relative;
   overflow: hidden;
 }
-.footer-bottom[_ngcontent-ng-c2367730538]::before {
+.footer-bottom[_ngcontent-ng-c4009182144]::before {
   content: "";
   position: absolute;
   top: 0;
@@ -433,9 +433,9 @@ img[_ngcontent-ng-c3177019257] {
       transparent,
       rgba(255, 255, 255, 0.1),
       transparent);
-  animation: _ngcontent-ng-c2367730538_shine 3s infinite;
+  animation: _ngcontent-ng-c4009182144_shine 3s infinite;
 }
-@keyframes _ngcontent-ng-c2367730538_shine {
+@keyframes _ngcontent-ng-c4009182144_shine {
   0% {
     left: -100%;
   }
@@ -444,36 +444,36 @@ img[_ngcontent-ng-c3177019257] {
   }
 }
 @media (max-width: 768px) {
-  .footer[_ngcontent-ng-c2367730538] {
+  .footer[_ngcontent-ng-c4009182144] {
     padding: 2.5rem 2rem;
   }
 }
 @media (max-width: 576px) {
-  .footer[_ngcontent-ng-c2367730538] {
+  .footer[_ngcontent-ng-c4009182144] {
     flex-direction: column;
     text-align: center;
     align-items: center;
     padding: 2rem 1.5rem;
     gap: 2rem;
   }
-  .footer__brand[_ngcontent-ng-c2367730538]   p[_ngcontent-ng-c2367730538] {
+  .footer__brand[_ngcontent-ng-c4009182144]   p[_ngcontent-ng-c4009182144] {
     max-width: 100%;
   }
-  .footer__links[_ngcontent-ng-c2367730538]   h3[_ngcontent-ng-c2367730538]::after, 
-   .footer__social[_ngcontent-ng-c2367730538]   h3[_ngcontent-ng-c2367730538]::after {
+  .footer__links[_ngcontent-ng-c4009182144]   h3[_ngcontent-ng-c4009182144]::after, 
+   .footer__social[_ngcontent-ng-c4009182144]   h3[_ngcontent-ng-c4009182144]::after {
     left: 50%;
     transform: translateX(-50%);
   }
-  .footer__links[_ngcontent-ng-c2367730538]   a[_ngcontent-ng-c2367730538]:hover {
+  .footer__links[_ngcontent-ng-c4009182144]   a[_ngcontent-ng-c4009182144]:hover {
     transform: translateX(0);
   }
-  .footer__links[_ngcontent-ng-c2367730538]   a[_ngcontent-ng-c2367730538]::before {
+  .footer__links[_ngcontent-ng-c4009182144]   a[_ngcontent-ng-c4009182144]::before {
     display: none;
   }
-  .social-icons[_ngcontent-ng-c2367730538] {
+  .social-icons[_ngcontent-ng-c4009182144] {
     justify-content: center;
   }
-  .footer-bottom[_ngcontent-ng-c2367730538] {
+  .footer-bottom[_ngcontent-ng-c4009182144] {
     width: 100%;
   }
 }
@@ -996,7 +996,7 @@ img[_ngcontent-ng-c3177019257] {
 /*# sourceMappingURL=/product-item.css.map */</style></head>
 <body><!--nghm--><script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
 </script><script>window.__jsaction_bootstrap(document.body,"ng",["click","input"],[]);</script>
-  <app-root ng-version="22.0.2" _nghost-ng-c3177019257="" ngh="3" ng-server-context="ssg"><app-header _ngcontent-ng-c3177019257="" _nghost-ng-c291831230="" ngh="0"><header _ngcontent-ng-c291831230="" class="header"><div _ngcontent-ng-c291831230="" class="header__logo"><h1 _ngcontent-ng-c291831230="" style="color: yellow;">Shop<span _ngcontent-ng-c291831230="">App</span></h1></div><nav _ngcontent-ng-c291831230="" class="header__nav"><a _ngcontent-ng-c291831230="" routerlink="/" routerlinkactive="active" href="/" class="active" jsaction="click:;">Home</a><a _ngcontent-ng-c291831230="" routerlink="/products" routerlinkactive="active" href="/products" class="" jsaction="click:;">Products</a><a _ngcontent-ng-c291831230="" routerlink="/about" routerlinkactive="active" href="/about" class="" jsaction="click:;">Blog</a><a _ngcontent-ng-c291831230="" routerlink="/contact" routerlinkactive="active" href="/contact" class="" jsaction="click:;">Contact</a></nav></header></app-header><main _ngcontent-ng-c3177019257=""><router-outlet _ngcontent-ng-c3177019257=""></router-outlet><app-container _nghost-ng-c1913803556="" ngh="2"><section _ngcontent-ng-c1913803556="" aria-labelledby="products-title" class="container"><div _ngcontent-ng-c1913803556="" class="hero"><h2 _ngcontent-ng-c1913803556="" id="products-title">Produits populaires</h2><p _ngcontent-ng-c1913803556="">Découvrez des produits soigneusement sélectionnés pour votre quotidien.</p></div><div _ngcontent-ng-c1913803556="" class="toolbar"><input _ngcontent-ng-c1913803556="" type="search" placeholder="Rechercher un produit" aria-label="Rechercher un produit" value="" jsaction="input:;"><button _ngcontent-ng-c1913803556="" type="button" class="cart-button" jsaction="click:;"> Panier (0) </button></div><app-product-list _ngcontent-ng-c1913803556="" _nghost-ng-c2621989807="" ngh="1"><div _ngcontent-ng-c2621989807="" role="list" aria-label="Liste des produits" class="products-grid"><app-product-item _ngcontent-ng-c2621989807="" role="listitem" _nghost-ng-c3844743922="" ngh="0"><article _ngcontent-ng-c3844743922="" class="product-card"><a _ngcontent-ng-c3844743922="" href="#" class="product-link" aria-label="Voir le produit Robe élégante"><img _ngcontent-ng-c3844743922="" src="assets/images/shop2.jpeg" alt="Robe élégante"><div _ngcontent-ng-c3844743922="" class="product-content"><h3 _ngcontent-ng-c3844743922="">Robe élégante</h3><p _ngcontent-ng-c3844743922="">Robe de soirée chic</p><span _ngcontent-ng-c3844743922="" class="price">85000 FCFA</span></div></a><button _ngcontent-ng-c3844743922="" type="button" class="add-button" jsaction="click:;"> Ajouter au panier </button></article></app-product-item><!--container--><app-product-item _ngcontent-ng-c2621989807="" role="listitem" _nghost-ng-c3844743922="" ngh="0"><article _ngcontent-ng-c3844743922="" class="product-card"><a _ngcontent-ng-c3844743922="" href="#" class="product-link" aria-label="Voir le produit Robe d’exception"><img _ngcontent-ng-c3844743922="" src="assets/images/shop1.jpeg" alt="Robe d’exception"><div _ngcontent-ng-c3844743922="" class="product-content"><h3 _ngcontent-ng-c3844743922="">Robe d’exception</h3><p _ngcontent-ng-c3844743922="">Modèle raffiné pour toutes les occasions</p><span _ngcontent-ng-c3844743922="" class="price">65000 FCFA</span></div></a><button _ngcontent-ng-c3844743922="" type="button" class="add-button" jsaction="click:;"> Ajouter au panier </button></article></app-product-item><!--container--><app-product-item _ngcontent-ng-c2621989807="" role="listitem" _nghost-ng-c3844743922="" ngh="0"><article _ngcontent-ng-c3844743922="" class="product-card"><a _ngcontent-ng-c3844743922="" href="#" class="product-link" aria-label="Voir le produit Salade Doualaise"><img _ngcontent-ng-c3844743922="" src="assets/images/plat1.jpeg" alt="Salade Doualaise"><div _ngcontent-ng-c3844743922="" class="product-content"><h3 _ngcontent-ng-c3844743922="">Salade Doualaise</h3><p _ngcontent-ng-c3844743922="">Repas frais et savoureux</p><span _ngcontent-ng-c3844743922="" class="price">3500 FCFA</span></div></a><button _ngcontent-ng-c3844743922="" type="button" class="add-button" jsaction="click:;"> Ajouter au panier </button></article></app-product-item><!--container--><app-product-item _ngcontent-ng-c2621989807="" role="listitem" _nghost-ng-c3844743922="" ngh="0"><article _ngcontent-ng-c3844743922="" class="product-card"><a _ngcontent-ng-c3844743922="" href="#" class="product-link" aria-label="Voir le produit Nike Air"><img _ngcontent-ng-c3844743922="" src="assets/images/nike1.jpg" alt="Nike Air"><div _ngcontent-ng-c3844743922="" class="product-content"><h3 _ngcontent-ng-c3844743922="">Nike Air</h3><p _ngcontent-ng-c3844743922="">Chaussures de sport confortables</p><span _ngcontent-ng-c3844743922="" class="price">85000 FCFA</span></div></a><button _ngcontent-ng-c3844743922="" type="button" class="add-button" jsaction="click:;"> Ajouter au panier </button></article></app-product-item><!--container--><app-product-item _ngcontent-ng-c2621989807="" role="listitem" _nghost-ng-c3844743922="" ngh="0"><article _ngcontent-ng-c3844743922="" class="product-card"><a _ngcontent-ng-c3844743922="" href="#" class="product-link" aria-label="Voir le produit Nike Run"><img _ngcontent-ng-c3844743922="" src="assets/images/nike2.jpg" alt="Nike Run"><div _ngcontent-ng-c3844743922="" class="product-content"><h3 _ngcontent-ng-c3844743922="">Nike Run</h3><p _ngcontent-ng-c3844743922="">Design moderne et performance</p><span _ngcontent-ng-c3844743922="" class="price">65000 FCFA</span></div></a><button _ngcontent-ng-c3844743922="" type="button" class="add-button" jsaction="click:;"> Ajouter au panier </button></article></app-product-item><!--container--><app-product-item _ngcontent-ng-c2621989807="" role="listitem" _nghost-ng-c3844743922="" ngh="0"><article _ngcontent-ng-c3844743922="" class="product-card"><a _ngcontent-ng-c3844743922="" href="#" class="product-link" aria-label="Voir le produit Jordan Retro"><img _ngcontent-ng-c3844743922="" src="assets/images/jordan1.jpg" alt="Jordan Retro"><div _ngcontent-ng-c3844743922="" class="product-content"><h3 _ngcontent-ng-c3844743922="">Jordan Retro</h3><p _ngcontent-ng-c3844743922="">Style urbain et premium</p><span _ngcontent-ng-c3844743922="" class="price">3500 FCFA</span></div></a><button _ngcontent-ng-c3844743922="" type="button" class="add-button" jsaction="click:;"> Ajouter au panier </button></article></app-product-item><!--container--><app-product-item _ngcontent-ng-c2621989807="" role="listitem" _nghost-ng-c3844743922="" ngh="0"><article _ngcontent-ng-c3844743922="" class="product-card"><a _ngcontent-ng-c3844743922="" href="#" class="product-link" aria-label="Voir le produit Jordan Classic"><img _ngcontent-ng-c3844743922="" src="assets/images/jordan2.jpg" alt="Jordan Classic"><div _ngcontent-ng-c3844743922="" class="product-content"><h3 _ngcontent-ng-c3844743922="">Jordan Classic</h3><p _ngcontent-ng-c3844743922="">Chaussure iconique à la mode</p><span _ngcontent-ng-c3844743922="" class="price">65000 FCFA</span></div></a><button _ngcontent-ng-c3844743922="" type="button" class="add-button" jsaction="click:;"> Ajouter au panier </button></article></app-product-item><!--container--><app-product-item _ngcontent-ng-c2621989807="" role="listitem" _nghost-ng-c3844743922="" ngh="0"><article _ngcontent-ng-c3844743922="" class="product-card"><a _ngcontent-ng-c3844743922="" href="#" class="product-link" aria-label="Voir le produit Star Street"><img _ngcontent-ng-c3844743922="" src="assets/images/star1.jpg" alt="Star Street"><div _ngcontent-ng-c3844743922="" class="product-content"><h3 _ngcontent-ng-c3844743922="">Star Street</h3><p _ngcontent-ng-c3844743922="">Chaussures de ville polyvalentes</p><span _ngcontent-ng-c3844743922="" class="price">3500 FCFA</span></div></a><button _ngcontent-ng-c3844743922="" type="button" class="add-button" jsaction="click:;"> Ajouter au panier </button></article></app-product-item><!--container--><!--container--></div></app-product-list><!--container--></section></app-container><!--container--></main><app-footer _ngcontent-ng-c3177019257="" _nghost-ng-c2367730538="" ngh="0"><footer _ngcontent-ng-c2367730538="" id="contact" class="footer"><div _ngcontent-ng-c2367730538="" class="footer__brand"><h2 _ngcontent-ng-c2367730538="" style="color: yellow;">Shop<span _ngcontent-ng-c2367730538="">App</span></h2><p _ngcontent-ng-c2367730538="">Votre boutique en ligne de confiance. Venez par curiosité et rentrez avec satisfaction.</p></div><div _ngcontent-ng-c2367730538="" class="footer__links"><h3 _ngcontent-ng-c2367730538="">Navigation</h3><a _ngcontent-ng-c2367730538="" routerlink="/" routerlinkactive="active" href="/" class="active" jsaction="click:;">Home</a><a _ngcontent-ng-c2367730538="" routerlink="/products" routerlinkactive="active" href="/products" class="" jsaction="click:;">Products</a><a _ngcontent-ng-c2367730538="" routerlink="/about" routerlinkactive="active" href="/about" class="" jsaction="click:;">Blog</a><a _ngcontent-ng-c2367730538="" routerlink="/contact" routerlinkactive="active" href="/contact" class="" jsaction="click:;">Contact</a></div><div _ngcontent-ng-c2367730538="" class="footer__social"><h3 _ngcontent-ng-c2367730538="">Suivez-nous</h3><div _ngcontent-ng-c2367730538="" class="social-icons"><a _ngcontent-ng-c2367730538="" href="#"><i _ngcontent-ng-c2367730538="" class="fab fa-facebook-f"></i></a><a _ngcontent-ng-c2367730538="" href="#"><i _ngcontent-ng-c2367730538="" class="fab fa-instagram"></i></a><a _ngcontent-ng-c2367730538="" href="#"><i _ngcontent-ng-c2367730538="" class="fab fa-x-twitter"></i></a><a _ngcontent-ng-c2367730538="" href="#"><i _ngcontent-ng-c2367730538="" class="fab fa-linkedin-in"></i></a></div></div></footer><div _ngcontent-ng-c2367730538="" class="footer-bottom"> Copyright © 2026. Tous droits réservés.
+  <app-root ng-version="22.0.2" _nghost-ng-c3177019257="" ngh="3" ng-server-context="ssg"><app-header _ngcontent-ng-c3177019257="" _nghost-ng-c291831230="" ngh="0"><header _ngcontent-ng-c291831230="" class="header"><div _ngcontent-ng-c291831230="" class="header__logo"><h1 _ngcontent-ng-c291831230="" style="color: yellow;">Shop<span _ngcontent-ng-c291831230="">App</span></h1></div><nav _ngcontent-ng-c291831230="" class="header__nav"><a _ngcontent-ng-c291831230="" routerlink="/" routerlinkactive="active" href="/" class="active" jsaction="click:;">Home</a><a _ngcontent-ng-c291831230="" routerlink="/products" routerlinkactive="active" href="/products" class="" jsaction="click:;">Products</a><a _ngcontent-ng-c291831230="" routerlink="/about" routerlinkactive="active" href="/about" class="" jsaction="click:;">Blog</a><a _ngcontent-ng-c291831230="" routerlink="/contact" routerlinkactive="active" href="/contact" class="" jsaction="click:;">Contact</a></nav></header></app-header><main _ngcontent-ng-c3177019257=""><router-outlet _ngcontent-ng-c3177019257=""></router-outlet><app-container _nghost-ng-c1913803556="" ngh="2"><section _ngcontent-ng-c1913803556="" aria-labelledby="products-title" class="container"><div _ngcontent-ng-c1913803556="" class="hero"><h2 _ngcontent-ng-c1913803556="" id="products-title">Produits populaires</h2><p _ngcontent-ng-c1913803556="">Découvrez des produits soigneusement sélectionnés pour votre quotidien.</p></div><div _ngcontent-ng-c1913803556="" class="toolbar"><input _ngcontent-ng-c1913803556="" type="search" placeholder="Rechercher un produit" aria-label="Rechercher un produit" value="" jsaction="input:;"><button _ngcontent-ng-c1913803556="" type="button" class="cart-button" jsaction="click:;"> Panier (0) </button></div><app-product-list _ngcontent-ng-c1913803556="" _nghost-ng-c2621989807="" ngh="1"><div _ngcontent-ng-c2621989807="" role="list" aria-label="Liste des produits" class="products-grid"><app-product-item _ngcontent-ng-c2621989807="" role="listitem" _nghost-ng-c3844743922="" ngh="0"><article _ngcontent-ng-c3844743922="" class="product-card"><a _ngcontent-ng-c3844743922="" href="#" class="product-link" aria-label="Voir le produit Robe élégante"><img _ngcontent-ng-c3844743922="" src="assets/images/shop2.jpeg" alt="Robe élégante"><div _ngcontent-ng-c3844743922="" class="product-content"><h3 _ngcontent-ng-c3844743922="">Robe élégante</h3><p _ngcontent-ng-c3844743922="">Robe de soirée chic</p><span _ngcontent-ng-c3844743922="" class="price">85000 FCFA</span></div></a><button _ngcontent-ng-c3844743922="" type="button" class="add-button" jsaction="click:;"> Ajouter au panier </button></article></app-product-item><!--container--><app-product-item _ngcontent-ng-c2621989807="" role="listitem" _nghost-ng-c3844743922="" ngh="0"><article _ngcontent-ng-c3844743922="" class="product-card"><a _ngcontent-ng-c3844743922="" href="#" class="product-link" aria-label="Voir le produit Robe d’exception"><img _ngcontent-ng-c3844743922="" src="assets/images/shop1.jpeg" alt="Robe d’exception"><div _ngcontent-ng-c3844743922="" class="product-content"><h3 _ngcontent-ng-c3844743922="">Robe d’exception</h3><p _ngcontent-ng-c3844743922="">Modèle raffiné pour toutes les occasions</p><span _ngcontent-ng-c3844743922="" class="price">65000 FCFA</span></div></a><button _ngcontent-ng-c3844743922="" type="button" class="add-button" jsaction="click:;"> Ajouter au panier </button></article></app-product-item><!--container--><app-product-item _ngcontent-ng-c2621989807="" role="listitem" _nghost-ng-c3844743922="" ngh="0"><article _ngcontent-ng-c3844743922="" class="product-card"><a _ngcontent-ng-c3844743922="" href="#" class="product-link" aria-label="Voir le produit Salade Doualaise"><img _ngcontent-ng-c3844743922="" src="assets/images/plat1.jpeg" alt="Salade Doualaise"><div _ngcontent-ng-c3844743922="" class="product-content"><h3 _ngcontent-ng-c3844743922="">Salade Doualaise</h3><p _ngcontent-ng-c3844743922="">Repas frais et savoureux</p><span _ngcontent-ng-c3844743922="" class="price">3500 FCFA</span></div></a><button _ngcontent-ng-c3844743922="" type="button" class="add-button" jsaction="click:;"> Ajouter au panier </button></article></app-product-item><!--container--><app-product-item _ngcontent-ng-c2621989807="" role="listitem" _nghost-ng-c3844743922="" ngh="0"><article _ngcontent-ng-c3844743922="" class="product-card"><a _ngcontent-ng-c3844743922="" href="#" class="product-link" aria-label="Voir le produit Nike Air"><img _ngcontent-ng-c3844743922="" src="assets/images/nike1.jpg" alt="Nike Air"><div _ngcontent-ng-c3844743922="" class="product-content"><h3 _ngcontent-ng-c3844743922="">Nike Air</h3><p _ngcontent-ng-c3844743922="">Chaussures de sport confortables</p><span _ngcontent-ng-c3844743922="" class="price">85000 FCFA</span></div></a><button _ngcontent-ng-c3844743922="" type="button" class="add-button" jsaction="click:;"> Ajouter au panier </button></article></app-product-item><!--container--><app-product-item _ngcontent-ng-c2621989807="" role="listitem" _nghost-ng-c3844743922="" ngh="0"><article _ngcontent-ng-c3844743922="" class="product-card"><a _ngcontent-ng-c3844743922="" href="#" class="product-link" aria-label="Voir le produit Nike Run"><img _ngcontent-ng-c3844743922="" src="assets/images/nike2.jpg" alt="Nike Run"><div _ngcontent-ng-c3844743922="" class="product-content"><h3 _ngcontent-ng-c3844743922="">Nike Run</h3><p _ngcontent-ng-c3844743922="">Design moderne et performance</p><span _ngcontent-ng-c3844743922="" class="price">65000 FCFA</span></div></a><button _ngcontent-ng-c3844743922="" type="button" class="add-button" jsaction="click:;"> Ajouter au panier </button></article></app-product-item><!--container--><app-product-item _ngcontent-ng-c2621989807="" role="listitem" _nghost-ng-c3844743922="" ngh="0"><article _ngcontent-ng-c3844743922="" class="product-card"><a _ngcontent-ng-c3844743922="" href="#" class="product-link" aria-label="Voir le produit Jordan Retro"><img _ngcontent-ng-c3844743922="" src="assets/images/jordan1.jpg" alt="Jordan Retro"><div _ngcontent-ng-c3844743922="" class="product-content"><h3 _ngcontent-ng-c3844743922="">Jordan Retro</h3><p _ngcontent-ng-c3844743922="">Style urbain et premium</p><span _ngcontent-ng-c3844743922="" class="price">3500 FCFA</span></div></a><button _ngcontent-ng-c3844743922="" type="button" class="add-button" jsaction="click:;"> Ajouter au panier </button></article></app-product-item><!--container--><app-product-item _ngcontent-ng-c2621989807="" role="listitem" _nghost-ng-c3844743922="" ngh="0"><article _ngcontent-ng-c3844743922="" class="product-card"><a _ngcontent-ng-c3844743922="" href="#" class="product-link" aria-label="Voir le produit Jordan Classic"><img _ngcontent-ng-c3844743922="" src="assets/images/jordan2.jpg" alt="Jordan Classic"><div _ngcontent-ng-c3844743922="" class="product-content"><h3 _ngcontent-ng-c3844743922="">Jordan Classic</h3><p _ngcontent-ng-c3844743922="">Chaussure iconique à la mode</p><span _ngcontent-ng-c3844743922="" class="price">65000 FCFA</span></div></a><button _ngcontent-ng-c3844743922="" type="button" class="add-button" jsaction="click:;"> Ajouter au panier </button></article></app-product-item><!--container--><app-product-item _ngcontent-ng-c2621989807="" role="listitem" _nghost-ng-c3844743922="" ngh="0"><article _ngcontent-ng-c3844743922="" class="product-card"><a _ngcontent-ng-c3844743922="" href="#" class="product-link" aria-label="Voir le produit Star Street"><img _ngcontent-ng-c3844743922="" src="assets/images/star1.jpg" alt="Star Street"><div _ngcontent-ng-c3844743922="" class="product-content"><h3 _ngcontent-ng-c3844743922="">Star Street</h3><p _ngcontent-ng-c3844743922="">Chaussures de ville polyvalentes</p><span _ngcontent-ng-c3844743922="" class="price">3500 FCFA</span></div></a><button _ngcontent-ng-c3844743922="" type="button" class="add-button" jsaction="click:;"> Ajouter au panier </button></article></app-product-item><!--container--><!--container--></div></app-product-list><!--container--></section></app-container><!--container--></main><app-footer _ngcontent-ng-c3177019257="" _nghost-ng-c4009182144="" ngh="0"><footer _ngcontent-ng-c4009182144="" id="contact" class="footer"><div _ngcontent-ng-c4009182144="" class="footer__brand"><h2 _ngcontent-ng-c4009182144="" style="color: yellow;">Shop<span _ngcontent-ng-c4009182144="">App</span></h2><p _ngcontent-ng-c4009182144="">Votre boutique en ligne de confiance. Venez par curiosité et rentrez avec satisfaction.</p></div><div _ngcontent-ng-c4009182144="" class="footer__links"><h3 _ngcontent-ng-c4009182144="">Navigation</h3><a _ngcontent-ng-c4009182144="" routerlink="/" routerlinkactive="active" href="/" class="active" jsaction="click:;">Home</a><a _ngcontent-ng-c4009182144="" routerlink="/products" routerlinkactive="active" href="/products" class="" jsaction="click:;">Products</a><a _ngcontent-ng-c4009182144="" routerlink="/about" routerlinkactive="active" href="/about" class="" jsaction="click:;">Blog</a><a _ngcontent-ng-c4009182144="" routerlink="/contact" routerlinkactive="active" href="/contact" class="" jsaction="click:;">Contact</a></div><div _ngcontent-ng-c4009182144="" class="footer__social"><h3 _ngcontent-ng-c4009182144="">Suivez-nous</h3><div _ngcontent-ng-c4009182144="" class="social-icons"><a _ngcontent-ng-c4009182144="" href="#" aria-label="Facebook"><svg _ngcontent-ng-c4009182144="" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path _ngcontent-ng-c4009182144="" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></a><a _ngcontent-ng-c4009182144="" href="#" aria-label="Instagram"><svg _ngcontent-ng-c4009182144="" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path _ngcontent-ng-c4009182144="" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg></a><a _ngcontent-ng-c4009182144="" href="#" aria-label="Twitter"><svg _ngcontent-ng-c4009182144="" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path _ngcontent-ng-c4009182144="" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a><a _ngcontent-ng-c4009182144="" href="#" aria-label="LinkedIn"><svg _ngcontent-ng-c4009182144="" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path _ngcontent-ng-c4009182144="" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a></div></div></footer><div _ngcontent-ng-c4009182144="" class="footer-bottom"> Copyright © 2026. Tous droits réservés.
 </div></app-footer></app-root>
 <script src="main.js" type="module"></script>
 <script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"2":"t0"},"c":{"2":[{"i":"t0","r":2,"t":{"0":"t1"},"c":{"0":[{"i":"t1","r":1}]},"x":8}]}},{"t":{"11":"t2"},"c":{"11":[]}},{"c":{"2":[{"i":"c1913803556","r":1}]}}]}</script></body></html>`;

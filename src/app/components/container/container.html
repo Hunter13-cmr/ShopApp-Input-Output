@@ -1,9 +1,53 @@
+<!-- ============================================
+     CONTAINER COMPONENT - TEMPLATE PRINCIPAL
+     ============================================
+     
+     Structure :
+     - section.container : Section principale avec hero + toolbar
+     - .hero : Titre et description de la page
+     - .toolbar : Barre de recherche + bouton panier
+     - app-product-list : Catalogue des produits
+     - Cart modal : Panier d'achat (conditionnel)
+     
+     Fonctionnalités :
+     - Recherche de produits en temps réel
+     - Bouton panier avec compteur
+     - Modal panier avec overlay
+     - Gestion des quantités (+/-)
+     - Confirmation de commande
+     
+     Accessibilité :
+     - aria-labelledby : Lien vers titre pour screen readers
+     - aria-label : Labels pour inputs et boutons
+     - aria-modal : Indique que le modal est actif
+     - role="dialog" : Rôle sémantique pour modal
+-->
+
 <section class="container" aria-labelledby="products-title">
+  <!-- ============================================
+       HERO SECTION
+       ============================================
+       - Titre principal avec id pour accessibilité
+       - Description courte de la page
+       - Centré avec animations CSS
+  -->
   <div class="hero">
     <h2 id="products-title">Produits populaires</h2>
     <p>Découvrez des produits soigneusement sélectionnés pour votre quotidien.</p>
   </div>
 
+  <!-- ============================================
+       TOOLBAR - RECHERCHE & PANIER
+       ============================================
+       - Input search : Recherche avec binding bidirectionnel
+       - Bouton panier : Affiche le nombre d'articles
+       
+       Data Binding :
+       - [value]="searchTerm()" :Affichage valeur
+       - (input)="onSearch(...)" : Capture events clavier
+       - (click)="isCartOpen.set(true)" : Ouvre modal
+       - {{ totalItems }} : Interpolation compteur
+  -->
   <div class="toolbar">
     <input
       type="search"
@@ -18,30 +62,77 @@
     </button>
   </div>
 
+  <!-- ============================================
+       LISTE DES PRODUITS
+       ============================================
+       - Composant enfant ProductList
+       - [searchTerm] : Passe le terme de recherche
+       - (addToCart) : Reçoit événement d'ajout
+       
+       Communication parent → enfant : Input binding
+       Communication enfant → parent : Output binding
+  -->
   <app-product-list
     [searchTerm]="searchTerm()"
     (addToCart)="addToCart($event)"
   ></app-product-list>
 
+  <!-- ============================================
+       CART MODAL - AFFICHAGE CONDITIONNEL
+       ============================================
+       - @if : Affiche seulement si isCartOpen() === true
+       - Structure : Overlay + Modal + Panel
+       
+       Accessibilité :
+       - role="dialog" : Rôle pour screen readers
+       - aria-modal="true" : Indique modal modal
+       - aria-label : Description du modal
+  -->
   @if (isCartOpen()) {
+    <!-- Overlay sombre en arrière-plan -->
     <div class="cart-overlay" (click)="closeCart()"></div>
+    
+    <!-- Modal container -->
     <div class="cart-modal" role="dialog" aria-modal="true" aria-label="Panier">
       <div class="cart-panel">
+        <!-- ============================================
+             CART HEADER
+             ============================================
+             - Titre du panier
+             - Bouton fermer avec événement
+        -->
         <div class="cart-header">
           <h3>Votre panier</h3>
           <button type="button" (click)="closeCart()">Fermer</button>
         </div>
 
+        <!-- ============================================
+             CART CONTENT - CONDITIONNEL
+             ============================================
+             - @if : Panier vide
+             - @else : Panier avec articles
+        -->
         @if (cartItems().length === 0) {
+          <!-- Message panier vide -->
           <p class="empty-cart">Votre panier est vide pour le moment.</p>
         } @else {
+          <!-- ============================================
+               LISTE DES ARTICLES
+               ============================================
+               - ul : Liste des articles
+               - @for : Boucle sur cartItems
+               - track item.id : Optimisation performance
+          -->
           <ul>
             @for (item of cartItems(); track item.id) {
               <li>
+                <!-- Info produit : nom + quantité + prix -->
                 <div class="cart-item-info">
                   <span>{{ item.name }} × {{ item.quantity }}</span>
                   <strong>{{ item.price * item.quantity }} FCFA</strong>
                 </div>
+                
+                <!-- Actions : +/- et supprimer -->
                 <div class="cart-item-actions">
                   <button type="button" class="qty-btn" (click)="decreaseQuantity(item.id)">−</button>
                   <span>{{ item.quantity }}</span>
@@ -51,12 +142,20 @@
               </li>
             }
           </ul>
+          
+          <!-- ============================================
+               CART SUMMARY - TOTAL & COMMANDE
+               ============================================
+               - Total : Prix total calculé
+               - Bouton Commander : Appelle confirmOrder()
+          -->
           <div class="cart-summary">
             <p>Total : {{ totalPrice }} FCFA</p>
             <button type="button" class="checkout" (click)="confirmOrder()">Commander</button>
           </div>
         }
 
+        <!-- Message de confirmation (optionnel) -->
         @if (orderMessage()) {
           <p class="order-message">{{ orderMessage() }}</p>
         }
