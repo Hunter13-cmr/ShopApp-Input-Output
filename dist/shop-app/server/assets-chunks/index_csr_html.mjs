@@ -1,12 +1,12 @@
 export default `<!doctype html>
-<html lang="fr" data-beasties-container="">
+<html lang="fr">
 <head>
   <meta charset="utf-8">
   <title>Shop App</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>:root{--fa-family-brands:"Font Awesome 7 Brands";--fa-font-brands:normal 400 1em/1 var(--fa-family-brands)}:root{--fa-font-regular:normal 400 1em/1 var(--fa-family-classic)}:root{--fa-family-classic:"Font Awesome 7 Free";--fa-font-solid:normal 900 1em/1 var(--fa-family-classic);--fa-style-family-classic:var(--fa-family-classic)}:root{font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;color:#1f2937;background-color:#f5f7fa;line-height:1.5;font-weight:400}*{box-sizing:border-box}body{margin:0;min-height:100vh;background-color:#f5f7fa}</style><link rel="stylesheet" href="styles-GJC46C3I.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-GJC46C3I.css"></noscript></head>
+<link rel="stylesheet" href="styles.css"></head>
 <body ngcm="">
   <app-root></app-root>
-<script src="main-X5PQI7GW.js" type="module"></script></body>
+<script src="main.js" type="module"></script></body>
 </html>`;

@@ -24,6 +24,7 @@
   ></app-product-list>
 
   @if (isCartOpen()) {
+    <div class="cart-overlay" (click)="closeCart()"></div>
     <div class="cart-modal" role="dialog" aria-modal="true" aria-label="Panier">
       <div class="cart-panel">
         <div class="cart-header">

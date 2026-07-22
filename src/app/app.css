@@ -1,0 +1,114 @@
+/* ============================================
+   APP GLOBAL STYLES - RESPONSIVE & ANIMATIONS
+   ============================================ */
+
+/* Ensure html takes full height */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global transitions for interactive elements */
+a, button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Prevent layout shift during animations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced focus styles for accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid #4caf50;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.2);
+}
+
+/* Header spacing adjustments for various breakpoints */
+@media (max-width: 768px) {
+  main {
+    padding-top: 0;
+  }
+}
+
+/* Mobile-first app container */
+@media (max-width: 576px) {
+  main {
+    flex: 1;
+  }
+}
+
+/* Page transition animations */
+main {
+  animation: pageLoad 0.5s ease-out;
+}
+
+@keyframes pageLoad {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animation for product cards */
+app-product-item {
+  display: block;
+  animation: cardAppear 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+app-product-item:nth-child(1) { animation-delay: 0.1s; }
+app-product-item:nth-child(2) { animation-delay: 0.2s; }
+app-product-item:nth-child(3) { animation-delay: 0.3s; }
+app-product-item:nth-child(4) { animation-delay: 0.4s; }
+app-product-item:nth-child(5) { animation-delay: 0.5s; }
+app-product-item:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive text sizing */
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+/* Smooth color transitions */
+body {
+  transition: background-color 0.3s ease;
+}
+
+/* Loading shimmer effect for images */
+img {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

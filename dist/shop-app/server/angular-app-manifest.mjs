@@ -1,7 +1,7 @@
 
 export default {
   bootstrap: () => import('./main.server.mjs').then(m => m.default),
-  inlineCriticalCss: true,
+  inlineCriticalCss: false,
   baseHref: '/',
   locale: undefined,
   routes: [
@@ -21,10 +21,9 @@ export default {
 ],
   entryPointToBrowserMapping: undefined,
   assets: {
-    'index.csr.html': {size: 1037, hash: '81a7234adfae91f41cf74162a68d91586cb9fbd9f4d7500a99badfbea2644888', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 886, hash: '4a575fd90f69fdd73916a03f65facff8d738e7b82b885cef1b8ef7071db89296', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
-    'index.html': {size: 19971, hash: '61c1edf4e51dd377aeb857fcae96b4b92a13fc7b8d5b0e910f1c6ac1282f85de', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
-    'products/index.html': {size: 19990, hash: '869f8311acf2f0c611ab3983d51b63cad0f3b37ece50e6c5e2c9c0fb9f577631', text: () => import('./assets-chunks/products_index_html.mjs').then(m => m.default)},
-    'styles-GJC46C3I.css': {size: 75753, hash: 'caXf9yqNx5Q', text: () => import('./assets-chunks/styles-GJC46C3I_css.mjs').then(m => m.default)}
+    'index.csr.html': {size: 328, hash: '13bd366e0359feb7d934d58924bf5834adc78eb774f2751d572f0be8d3af3599', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 868, hash: 'ca6364338104a30b3bd425fa65baf946f91c7dad4ba828e12f55f0b1774c933d', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'index.html': {size: 36455, hash: '8a5a0a2eedec848b329de646a896a2f6e772cdb171a74550886d72bb3d66f756', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
+    'products/index.html': {size: 36468, hash: 'c84fe369da559cb191323aea5a421493c727b7bf6b7e7b10bf76976f6b9f2763', text: () => import('./assets-chunks/products_index_html.mjs').then(m => m.default)}
   },
 };
