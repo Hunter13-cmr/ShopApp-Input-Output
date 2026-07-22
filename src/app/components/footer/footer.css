@@ -1,4 +1,23 @@
-/* FOOTER */
+/* ============================================
+   FOOTER COMPONENT
+   ============================================
+   
+   Design System:
+   - Background: Dégradé vert forêt avec animation shimmer
+   - Shadow: Ombre supérieure pour séparer du contenu
+   - Position: relative avec overflow hidden pour animations
+   - Padding: 3.5rem 4rem pour espacement généreux
+   
+   Special Effects:
+   - Top border: Barre animée avec gradient shimmer
+   - Animation: shimmer 3s linear infinite
+   - Box-shadow: Effet d'élévation vers le haut
+   
+   Responsive:
+   - Desktop: 3 colonnes avec flex-wrap
+   - Mobile: Colonne unique centrée
+*/
+
 .footer {
   background: linear-gradient(
     135deg,
@@ -23,6 +42,7 @@
   box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.15);
 }
 
+/* Barre animée en haut du footer */
 .footer::before {
   content: "";
   position: absolute;
@@ -43,7 +63,17 @@
   }
 }
 
-/* BRAND */
+/* ============================================
+   FOOTER BRAND SECTION
+   ============================================
+   
+   Design:
+   - Typography: Poppins 900 pour marque premium
+   - Text-shadow: Effet de profondeur
+   - Letter-spacing: 2px pour élégance
+   - Description: Opacité 0.9 pour lisibilité
+*/
+
 .footer__brand h2 {
   font-size: 2.2rem;
   font-weight: 900;
@@ -64,7 +94,22 @@
   font-size: 0.95rem;
 }
 
-/* LINKS */
+/* ============================================
+   FOOTER LINKS SECTION
+   ============================================
+   
+   Design:
+   - Layout: Column avec gap 0.9rem
+   - Headings: Soulignement jaune en pseudo-element
+   - Links: Flèche qui apparaît au hover
+   - Hover: Translation + changement couleur
+   
+   Animation:
+   - Arrow: Opacity 0 → 1 avec translation
+   - Link: translateX(8px) vers la droite
+   - Transition: cubic-bezier pour fluidité
+*/
+
 .footer__links {
   display: flex;
   flex-direction: column;
@@ -81,6 +126,7 @@
   padding-bottom: 0.5rem;
 }
 
+/* Soulignement décoratif sous les titres */
 .footer__links h3::after,
 .footer__social h3::after {
   content: "";
@@ -101,6 +147,7 @@
   padding-left: 0;
 }
 
+/* Flèche qui apparaît au hover */
 .footer__links a::before {
   content: "→";
   position: absolute;
@@ -121,7 +168,28 @@
   left: -15px;
 }
 
-/* SOCIAL */
+/* ============================================
+   SOCIAL ICONS SECTION
+   ============================================
+   
+   Design:
+   - Shape: Cercles de 45x45px
+   - Background: Blanc semi-transparent (0.15)
+   - Layout: Flex avec gap 1.2rem
+   - Icons: Font-size 1.1rem avec z-index 1
+   
+   Hover Effects:
+   - Fill: Cercle jaune qui grandit depuis centre
+   - Transform: Translation haut + rotation 360deg
+   - Shadow: Lueur jaune autour de l'icône
+   - Color: Texte devient vert forêt
+   
+   Animation:
+   - Scale circle: 0 → 1 (effet de remplissage)
+   - Rotation: 360deg complet
+   - Duration: 0.4s avec cubic-bezier
+*/
+
 .social-icons {
   display: flex;
   gap: 1.2rem;
@@ -147,6 +215,7 @@
   overflow: hidden;
 }
 
+/* Cercle jaune qui se dilate au hover */
 .social-icons a::before {
   content: "";
   position: absolute;
@@ -174,7 +243,25 @@
   font-size: 1.1rem;
 }
 
-/* COPYRIGHT */
+/* ============================================
+   COPYRIGHT SECTION
+   ============================================
+   
+   Design:
+   - Background: Vert foncé (#1b5e20)
+   - Text: Blanc centré
+   - Letter-spacing: 0.5px pour élégance
+   
+   Special Effect:
+   - Shine animation: Effet de brillance qui traverse
+   - Gradient: Transparent → blanc 10% → transparent
+   - Animation: 3s infinite, left -100% → 100%
+   
+   Accessibility:
+   - Position: relative pour contexte empilement
+   - Overflow: hidden pour cacher le shine hors zone
+*/
+
 .footer-bottom {
   background: #1b5e20;
   color: white;
@@ -188,6 +275,7 @@
   overflow: hidden;
 }
 
+/* Effet de brillance qui traverse le copyright */
 .footer-bottom::before {
   content: "";
   position: absolute;
@@ -208,14 +296,35 @@
   }
 }
 
-/* TABLET */
+/* ============================================
+   RESPONSIVE - TABLETTE (≤768px)
+   ============================================
+   
+   Adaptations:
+   - Footer: Padding réduit (2.5rem 2rem)
+   - Gap: Réduit entre les sections
+*/
+
 @media (max-width: 768px) {
   .footer {
     padding: 2.5rem 2rem;
   }
 }
 
-/* MOBILE */
+/* ============================================
+   RESPONSIVE - MOBILE (≤576px)
+   ============================================
+   
+   Adaptations:
+   - Footer: Disposition verticale (column)
+   - Alignment: Centré (text-align + align-items)
+   - Brand: Description en pleine largeur
+   - Titres: Soulignement centré (transform translateX)
+   - Links: Pas de translation au hover (désactivé)
+   - Social: Centré avec justify-content
+   - Bottom: Pleine largeur
+*/
+
 @media (max-width: 576px) {
   .footer {
     flex-direction: column;
