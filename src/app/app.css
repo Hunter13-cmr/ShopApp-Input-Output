@@ -1,52 +1,132 @@
 /* ============================================
-   APP GLOBAL STYLES - RESPONSIVE & ANIMATIONS
-   ============================================ */
+   APP COMPONENT - GLOBAL STYLES
+   ============================================
+   
+   This file contains global styles applied to the entire application.
+   It focuses on:
+   - Layout structure (sticky footer pattern)
+   - Global animations and transitions
+   - Accessibility enhancements
+   - Performance optimizations
+   - Skeleton loading effects
+*/
 
-/* Ensure html takes full height */
+/* ============================================
+   APP LAYOUT STRUCTURE
+   ============================================
+   
+   :host selector targets the component's host element.
+   - Display: flex column pour layout vertical
+   - Min-height: 100vh pour sticky footer
+   - Assure que le footer reste en bas même si contenu court
+*/
+
 :host {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Smooth scroll behavior */
+/* ============================================
+   GLOBAL SMOOTH SCROLL
+   ============================================
+   
+   - Scroll-behavior: smooth pour navigation fluide
+   - Applicable à tous les ancres (#links)
+   - Améliore l'expérience utilisateur
+   - Compatible avec tous les navigateurs modernes
+*/
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Global transitions for interactive elements */
+/* ============================================
+   GLOBAL TRANSITIONS
+   ============================================
+   
+   Applique une transition fluide à tous les liens et boutons.
+   - Duration: 0.3s
+   - Easing: cubic-bezier pour mouvement naturel
+   - Effet: Toutes les propriétés animées
+   
+   Note: Les composants individuels peuvent redéfinir
+   leurs propres transitions plus spécifiques.
+*/
+
 a, button {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Prevent layout shift during animations */
+/* ============================================
+   FONT SMOOTHING
+   ============================================
+   
+   Améliore le rendu des polices sur:
+   - Webkit (Chrome, Safari, Edge)
+   - Mozilla (Firefox)
+   
+   Résultat: Texte plus net et lisible
+*/
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Enhanced focus styles for accessibility */
+/* ============================================
+   ACCESSIBILITY - FOCUS STYLES
+   ============================================
+   
+   Styles personnalisés pour le focus clavier.
+   - Outline: 2px solid vert (#4caf50)
+   - Outline-offset: 2px pour espacement
+   - Box-shadow: Anneau supplémentaire pour visibilité
+   
+   WCAG Compliance: Contraste suffisant pour navigation clavier
+*/
+
 a:focus-visible, button:focus-visible, input:focus-visible {
   outline: 2px solid #4caf50;
   outline-offset: 2px;
   box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.2);
 }
 
-/* Header spacing adjustments for various breakpoints */
+/* ============================================
+   RESPONSIVE - HEADER SPACING
+   ============================================
+   
+   Ajustements pour différentes tailles d'écran.
+   - Tablette (≤768px): Supprime padding-top du main
+   - Mobile (≤576px): Flex: 1 pour main prend l'espace
+*/
+
 @media (max-width: 768px) {
   main {
     padding-top: 0;
   }
 }
 
-/* Mobile-first app container */
 @media (max-width: 576px) {
   main {
     flex: 1;
   }
 }
 
-/* Page transition animations */
+/* ============================================
+   PAGE LOAD ANIMATION
+   ============================================
+   
+   Animation d'entrée pour le contenu principal.
+   - Duration: 0.5s
+   - Effect: Fade in + translation vers le haut
+   - Appliqué à <main> pour effet de chargement
+   
+   Animation: pageLoad
+   - From: opacity 0, translateY(10px)
+   - To: opacity 1, translateY(0)
+*/
+
 main {
   animation: pageLoad 0.5s ease-out;
 }
@@ -62,7 +142,28 @@ main {
   }
 }
 
-/* Staggered animation for product cards */
+/* ============================================
+   STAGGERED CARD ANIMATIONS
+   ============================================
+   
+   Animation en cascade pour les cartes produits.
+   - Chaque carte apparaît avec un délai progressif
+   - Effect: Scale + fade + translation
+   - Amélioration: Expérience utilisateur premium
+   
+   Delays:
+   - Card 1: 0.1s
+   - Card 2: 0.2s
+   - Card 3: 0.3s
+   - Card 4: 0.4s
+   - Card 5: 0.5s
+   - Card 6: 0.6s
+   
+   Animation-fill-mode: both
+   - Garde l'état final après l'animation
+   - Évite le retour à l'état initial
+*/
+
 app-product-item {
   display: block;
   animation: cardAppear 0.5s ease-out;
@@ -87,17 +188,52 @@ app-product-item:nth-child(6) { animation-delay: 0.6s; }
   }
 }
 
-/* Responsive text sizing */
+/* ============================================
+   TYPOGRAPHY - HEADINGS
+   ============================================
+   
+   Line-height: 1.2 pour titres
+   - Améliore la lisibilité
+   - Espacement réduit entre lignes
+   - Look moderne et aéré
+*/
+
 h1, h2, h3 {
   line-height: 1.2;
 }
 
-/* Smooth color transitions */
+/* ============================================
+   BODY TRANSITIONS
+   ============================================
+   
+   Transition douce pour changements de background.
+   - Duration: 0.3s
+   - Utile pour thèmes clair/sombre futur
+   - Améliore les transitions entre pages
+*/
+
 body {
   transition: background-color 0.3s ease;
 }
 
-/* Loading shimmer effect for images */
+/* ============================================
+   SKELETON LOADING - IMAGES
+   ============================================
+   
+   Effet de chargement skeleton pour images.
+   - Background: Dégradé gris animé
+   - Animation: shimmer 1.5s infinite
+   - Durée: Déplacement de -200% à 200%
+   
+   Technique:
+   - Background-size: 200% pour effet de mouvement
+   - Animation: shimmer déplace le gradient
+   - Résultat: Effet de brillance qui traverse
+   
+   Note: Les vraies images remplacent ce skeleton
+   une fois chargées (si loading="lazy")
+*/
+
 img {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
