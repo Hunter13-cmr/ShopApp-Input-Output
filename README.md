@@ -8,7 +8,14 @@
 
 ---
 
+## 🚀 Live Demo
+👉 https://shop-app-input-output.vercel.app/
+
+---
+
 ## 🚀 Aperçu du projet
+
+![Demo](src/assets/demo/demo.gif)
 
 **Slogan** : *Votre boutique en ligne de confiance*
 
@@ -113,6 +120,25 @@ docs/
 ├── checklist.md              # Checklist projet
 └── README.md                 # Vue d'ensemble (ce fichier)
 ```
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Header
+![Header](docs/screenshots/desktop1.PNG)
+
+### 🍽 Container
+![Containaer](docs/screenshots/desktop2.PNG)
+
+### 🍽 Carte Panier
+![Carte panier](docs/screenshots/desktop3.PNG)
+
+### 🍽 Articles
+![Articles](docs/screenshots/desktop4.PNG)
+
+### 🍽 Footer
+![Footer](docs/screenshots/desktop5.PNG)
 
 ---
 
