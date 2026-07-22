@@ -1,4 +1,20 @@
-/* HEADER */
+/* ============================================
+   HEADER COMPONENT
+   ============================================
+   
+   Design System:
+   - Background: Gradient vert forêt (#4caf50 → #2e7d32)
+   - Shadow: Ombre portée pour effet de profondeur
+   - Position: Sticky avec backdrop blur pour effet glassmorphism
+   - Z-index: 1000 pour rester au-dessus du contenu
+   - Hover: Augmentation de l'ombre pour effet d'élévation
+   
+   Responsive:
+   - Desktop: padding 1.2rem 4rem
+   - Tablette (≤768px): padding réduit
+   - Mobile (≤576px): disposition verticale
+*/
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -27,7 +43,20 @@
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
 }
 
-/* LOGO */
+/* ============================================
+   LOGO SECTION
+   ============================================
+   
+   Design:
+   - Typographie: Poppins 900 (extra bold)
+   - Effet: Point lumineux jaune qui apparaît au hover
+   - Animation: Translation verticale + scale au survol
+   - Text-shadow: Pour donner de la profondeur
+   
+   Accessibility:
+   - z-index: 2 pour être au-dessus des autres éléments
+*/
+
 .header__logo {
   position: relative;
   z-index: 2;
@@ -51,6 +80,7 @@
   position: relative;
 }
 
+/* Point doré qui apparaît au hover */
 .header__logo h1::before {
   content: "";
   position: absolute;
@@ -79,7 +109,23 @@
   font-weight: 900;
 }
 
-/* NAVIGATION */
+/* ============================================
+   NAVIGATION LINKS
+   ============================================
+   
+   Design:
+   - Gap: 2.5rem entre les liens (desktop)
+   - Hover: Translation vers le haut et changement de couleur
+   - Underline: Animation de Soulignement depuis le centre
+   - Glow: Effet de lueur jaune sur le soulignement
+   - Active: Couleur jaune or + fontWeight 700
+   
+   Animation:
+   - cubic-bezier pour transition fluide
+   - Underline qui s'étend depuis le centre
+   - Box-shadow pour effet glow
+*/
+
 .header__nav {
   display: flex;
   align-items: center;
@@ -132,7 +178,17 @@
   font-weight: 700;
 }
 
-/* TABLET */
+/* ============================================
+   RESPONSIVE - TABLETTE (≤768px)
+   ============================================
+   
+   Adaptations:
+   - Header: Padding réduit (1rem 2rem)
+   - Logo: Taille de police réduite (1.8rem)
+   - Navigation: Gap réduit (1.5rem)
+   - Liens: Taille de police réduite (0.95rem)
+*/
+
 @media (max-width: 768px) {
   .header {
     padding: 1rem 2rem;
@@ -152,7 +208,24 @@
   }
 }
 
-/* MOBILE */
+/* ============================================
+   RESPONSIVE - MOBILE (≤576px)
+   ============================================
+   
+   Adaptations:
+   - Header: Disposition verticale (column)
+   - Navigation: 
+     * Background semi-transparent (glassmorphism)
+     * Flex-wrap pour retour à la ligne
+     * Centré avec justify-content
+     * Padding et border-radius pour effet de carte
+   - Liens:
+     * Padding augmenté pour zone tactile
+     * Background au hover
+     * Border-radius pour effet de pilule
+     * backdrop-filter pour glass effect
+*/
+
 @media (max-width: 576px) {
   .header {
     flex-direction: column;

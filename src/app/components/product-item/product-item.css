@@ -1,3 +1,26 @@
+/* ============================================
+   PRODUCT CARD COMPONENT
+   ============================================
+   
+   Design System:
+   - Background: Dégradé blanc pur vers blanc cassé
+   - Border-radius: 20px pour coins arrondis modernes
+   - Border: Bordure subtile verte transparente
+   - Shadow: Ombre douce pour effet d'élévation
+   - Overflow: Hidden pour respecter le border-radius
+   
+   Hover Effects:
+   - Translation: -8px vers le haut
+   - Scale: 1.02 pour effet de zoom léger
+   - Shadow: Augmentation de l'ombre (20px → 40px)
+   - Border: Devient plus visible (opacité 0.3)
+   - Top bar: Barre colorée qui apparaît
+   
+   Animation:
+   - cubic-bezier pour transition fluide
+   - Durée: 0.4s pour effet premium
+*/
+
 .product-card {
   background: linear-gradient(145deg, #ffffff 0%, #f9fdf9 100%);
   border-radius: 20px;
@@ -8,6 +31,7 @@
   position: relative;
 }
 
+/* Barre colorée en haut qui apparaît au hover */
 .product-card::before {
   content: "";
   position: absolute;
@@ -36,6 +60,20 @@
   text-decoration: none;
 }
 
+/* ============================================
+   PRODUCT IMAGE
+   ============================================
+   
+   Design:
+   - Height: 240px fixe pour cohérence
+   - Object-fit: cover pour recadrage intelligent
+   - Transition: Zoom au hover sur la carte
+   
+   Animation:
+   - Scale: 1.08 au hover
+   - Duration: 0.5s pour effet fluide
+*/
+
 .product-card img {
   width: 100%;
   height: 240px;
@@ -46,6 +84,22 @@
 .product-card:hover img {
   transform: scale(1.08);
 }
+
+/* ============================================
+   PRODUCT CONTENT
+   ============================================
+   
+   Design:
+   - Padding: 1.5rem pour espacement confortable
+   - Title: Vert forêt, 700 weight
+   - Description: Gris moyen pour contraste
+   - Price: Vert foncé, taille augmentée
+   
+   Typography:
+   - Titre: 1.25rem avec letter-spacing
+   - Description: 0.95rem avec line-height 1.5
+   - Prix: 1.3rem pour mise en valeur
+*/
 
 .product-content {
   padding: 1.5rem;
@@ -73,6 +127,30 @@
   display: block;
   margin-bottom: 1rem;
 }
+
+/* ============================================
+   ADD TO CART BUTTON
+   ============================================
+   
+   Design:
+   - Shape: Pilule (border-radius: 999px)
+   - Background: Dégradé vert Premium
+   - Shadow: Ombre colorée verte
+   - Text: Blanc, weight 600, letter-spacing 0.5px
+   
+   Hover Effects:
+   - Background: Dégradé plus clair
+   - Shadow: Augmentée et plus diffuse
+   - Transform: Translation vers le haut (-2px)
+   
+   Active State:
+   - Retour à la position normale
+   - Shadow réduite pour effet "pressé"
+   
+   Accessibility:
+   - Cursor: pointer
+   - Transition fluide pour feedback visuel
+*/
 
 .add-button {
   width: calc(100% - 2rem);
